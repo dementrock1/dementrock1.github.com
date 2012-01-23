@@ -15,9 +15,15 @@
   };
 
   root.cmdBlog.directories.github = {
-    name: "cmbblog repository on github",
+    name: "cmdblog repository on github",
     type: "link",
     url: "https://github.com/dementrock/cmdblog"
+  };
+
+  root.cmdBlog.directories.resume = {
+    name: "my resume",
+    type: "link",
+    url: "http://www.rockyduan.com/resume.pdf"
   };
 
   root.cmdBlog.commandFunctionList.welcome = {
@@ -62,7 +68,7 @@
   root.cmdBlog.commandFunctionList.ls = {
     run: function(args) {
       if (args.length === 0) {
-        return "Directories:\n\n" + root.cmdBlog.listToString(root.cmdBlog.getDirectoryList());
+        return "Directories:\n" + root.cmdBlog.listToString(root.cmdBlog.getDirectoryList());
       } else {
         return this.docString;
       }
